@@ -29,5 +29,11 @@ An AI-powered web application that analyzes resumes against a job description an
 - **Cosine Similarity**
 - **HTML, CSS**
 
+## 🌐 Live Demo
+
+🔗 Live Application: http://127.0.0.1:5000 (Localhost)
+
+> Note: This project currently runs locally. Cloud deployment is planned.
+
 ## 📂 Project Structure
 
