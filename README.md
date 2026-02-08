@@ -17,16 +17,17 @@ An AI-powered web application that analyzes resumes against a job description an
 
 ## 🛠️ Technologies Used
 
+- **Artificial Intelligence (AI)**
+- **Machine Learning**
+- **Natural Language Processing (NLP)**
 - **Python**
 - **Flask**
 - **Scikit-learn**
 - **NLTK**
 - **PyPDF2**
-- **HTML, CSS**
 - **TF-IDF Vectorizer**
 - **Cosine Similarity**
-
----
+- **HTML, CSS**
 
 ## 📂 Project Structure
 
