@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Screening System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            max-width: 700px;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        textarea, input[type="file"] {
+            width: 100%;
+        }
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eef3f7;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+   <!-- existing content -->
+    <h2>AI-Based Resume Screening System</h2>
+
+    <form action="/match" method="post" enctype="multipart/form-data">
+        <label><b>Upload Resume (PDF):</b></label><br>
+        <input type="file" name="resume" required><br><br>
+
+        <label><b>Job Description:</b></label><br>
+        <textarea name="job_description" rows="7" cols="60" required></textarea><br><br>
+
+        <button type="submit">Check Resume Match</button>
+    </form>
+
+    <hr>
+
+    {% if match_percentage is not none %}
+        <h3>Resume Match Percentage: {{ match_percentage }}%</h3>
+    {% endif %}
+
+    {% if missing_skills is not none %}
+        {% if missing_skills|length > 0 %}
+            <h4>Missing Skills:</h4>
+            <ul>
+                {% for skill in missing_skills %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p><b><p><b>Resume matches all listed job skills.</b></p>
+</b></p>
+        {% endif %}
+    {% endif %}
+
+</div>
+
+
+</body>
+</html>
